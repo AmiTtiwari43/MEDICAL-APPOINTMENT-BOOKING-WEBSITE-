@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form>
+        <h1>Medical Appointment Request</h1>
+        <form action="submit_appointment.php" method="POST">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+    
+            <label for="appointmentDate">Preferred Appointment Date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required><br><br>
+    
+            <label for="appointmentTime">Preferred Appointment Time:</label>
+            <input type="time" id="appointmentTime" name="appointmentTime" required><br><br>
+    
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="Dr. Smith">Dr. AMIT</option>
+                <option value="Dr. Johnson">Dr. ASHISH</option>
+                <option value="Dr. Brown">Dr. RAJA</option>
+            </select><br><br>
+    
+            <label for="reasonForAppointment">Reason for Appointment:</label>
+            <textarea id="reasonForAppointment" name="reasonForAppointment" rows="4" cols="50" required></textarea><br><br>
+    
+            <input type="submit" value="Submit Appointment Request">
+        </form>
+
+
+        
+</body>
+</html>

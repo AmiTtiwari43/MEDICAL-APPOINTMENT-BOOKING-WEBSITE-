@@ -3,42 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="form.css">
+    <title>Book Appointment - Horizon Clinic</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <form>
-        <h1>Medical Appointment Request</h1>
-        <form action="submit_appointment.php" method="POST">
-            <label for="patientName">Patient Name:</label>
-            <input type="text" id="patientName" name="patientName" required><br><br>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-    
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
-    
-            <label for="appointmentDate">Preferred Appointment Date:</label>
-            <input type="date" id="appointmentDate" name="appointmentDate" required><br><br>
-    
-            <label for="appointmentTime">Preferred Appointment Time:</label>
-            <input type="time" id="appointmentTime" name="appointmentTime" required><br><br>
-    
-            <label for="doctor">Select Doctor:</label>
-            <select id="doctor" name="doctor" required>
-                <option value="Dr. Smith">Dr. AMIT</option>
-                <option value="Dr. Johnson">Dr. ASHISH</option>
-                <option value="Dr. Brown">Dr. RAJA</option>
-            </select><br><br>
-    
-            <label for="reasonForAppointment">Reason for Appointment:</label>
-            <textarea id="reasonForAppointment" name="reasonForAppointment" rows="4" cols="50" required></textarea><br><br>
-    
-            <input type="submit" value="Submit Appointment Request">
-        </form>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.jpg" alt="Horizon Clinic Logo">
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="appointment">
+            <div class="container">
+                <h1>Medical Appointment Request</h1>
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name:</label>
+                        <input type="text" id="patientName" name="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Appointment Date:</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Appointment Time:</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor:</label>
+                        <select id="doctor" name="doctor" required>
+                            <option value="" disabled selected>Select a doctor</option>
+                            <option value="Dr. Amit">Dr. Amit</option>
+                            <option value="Dr. Ashish">Dr. Ashish</option>
+                            <option value="Dr. Raja">Dr. Raja</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Appointment:</label>
+                        <textarea id="reason" name="reason" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Appointment Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-        
+    <footer class="footer">
+        <div class="container">
+            <img src="assets/img/logo.jpg" alt="Horizon Clinic Logo" class="footer-logo">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>Email: info@horizonclinic.com</p>
+                    <p>Phone: +91 (555) 123-4567</p>
+                    <p>Address: Uni Hospital LPU, Jalandhar, Punjab</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-skype"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/appointment.js"></script>
 </body>
 </html>
